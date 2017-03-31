@@ -35,13 +35,7 @@ public class FindMidnum {
 		long end1 = System.currentTimeMillis();
 		long spend1 = end1 - start1;
 		System.out.println("merge sort need " + spend1 + "ms");
-		//treeSet没有指定取值的方法。。。。
-//		Set<Integer> treeset = new TreeSet<Integer>();
-//		for(int i=0;i<a.length;i++){
-//			treeset.add(a[i]);
-//		}
 		
-
 	}
 	public int fingMedium(int a[]){
 		int []b = new int[a.length/2];
@@ -50,7 +44,7 @@ public class FindMidnum {
 		maxheap.buildMaxHeap(b);
 		
 		
-		System.out.println("b:"+Arrays.toString(b));
+		System.out.println("数组前半部分b堆排序后:"+Arrays.toString(b));
 		for(int i=a.length/2+1;i<a.length;i++){
 			if(a[i] < b[0]){
 				b[0] = a[i];
