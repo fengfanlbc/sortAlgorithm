@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class HeapSort {
 	private int[] A;
 	private int heapsize;
-	
 	public int getParent(int i){return (i-1)/2;}
 	public int getLeft(int i){return 2*i+1;}
 	public int getRight(int i){return 2*i+2;}
@@ -27,7 +26,6 @@ public class HeapSort {
 			maxHeapfy(largest);
 		}
 	}
-	
 	public void buildMaxHeap(int a[]){
 		this.A = a;
 		this.heapsize = a.length;
@@ -37,7 +35,6 @@ public class HeapSort {
 			maxHeapfy(i);
 		}
 	}
-	
 	public void heapSort(int []a){
 		buildMaxHeap(a);
 		int step = 1;
@@ -47,22 +44,14 @@ public class HeapSort {
 			A[i] = A[0];
 			A[0] = temp;
 			heapsize--;
-			
 			maxHeapfy(0);
 		}
-	}
-	
-	
+	}	
 	public static void main(String[] args) {
 		    int [] A = {3, 7, 2, 11, 3, 4, 9, 2, 18, 0};
 		    System.out.println("Input: " + Arrays.toString(A));
 		    HeapSort maxhp = new HeapSort();
-//		    maxhp.buildMaxHeap(A);
-//		    System.out.println(Arrays.toString(A));
 		    maxhp.heapSort(A);
 		    System.out.println("Output: " + Arrays.toString(A));
-
-
 	}
-
 }
